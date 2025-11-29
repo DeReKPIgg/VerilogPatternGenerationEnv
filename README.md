@@ -21,7 +21,7 @@ docker run -id \
 ```
 docker exec -it [container_name] /bin/bash
 ```
-## 
+## RTL simulation & debug w/ waveform
 ```
 iverilog -o [complied_file_name] [TESTBED/PATTERN/DESIGN.v]
 vvp [complied_file_name]
