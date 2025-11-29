@@ -6,7 +6,7 @@ Don't wanna use ADFP if I'm not doing synthesis.
 docker build -t [image_name] .
 ```
 ```
-xhost +local:docker # Run this on your host first!
+xhost +local:docker
 
 docker run -id \
     --restart=always \
