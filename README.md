@@ -1,4 +1,4 @@
-# VerilogPatternGenerationEnv
+# VerilogSimulationEnv
 Don't wanna use ADFP if I'm not doing synthesis.
 
 ## Set up environment
@@ -23,6 +23,13 @@ docker exec -it [container_name] /bin/bash
 ```
 ## RTL simulation & debug w/ waveform
 ```
+## verilator (recommended)
+verilator --binary -Wno-fatal [TESTBED/PATTERN/DESIGN.v] --top [top_module_name] --trace
+./obj_dir/V[top_module_name]
+gtkwave [dumped.vcd] &
+```
+```
+## iverilog
 iverilog -o [complied_file_name] [TESTBED/PATTERN/DESIGN.v]
 vvp [complied_file_name]
 gtkwave [dumped.vcd] &
