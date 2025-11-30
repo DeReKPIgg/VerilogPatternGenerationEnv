@@ -24,7 +24,7 @@ docker exec -it [container_name] /bin/bash
 ## RTL simulation & debug w/ waveform
 ```
 ## verilator (recommended)
-verilator --binary -Wno-fatal [TESTBED/PATTERN/DESIGN.v] --top [top_module_name] --trace
+verilator --binary -Wno-lint [TESTBED/PATTERN/DESIGN.v] --top [top_module_name] --trace
 ./obj_dir/V[top_module_name]
 gtkwave [dumped.vcd] &
 ```
